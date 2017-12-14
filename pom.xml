@@ -107,6 +107,11 @@
 
         <!-- == For Test == -->
         <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.terasoluna.gfw</groupId>
             <artifactId>terasoluna-gfw-common-dependencies</artifactId>
             <type>pom</type>
@@ -154,7 +159,18 @@
             <type>pom</type>
             <scope>test</scope>
         </dependency>
-        <!-- == For Test == -->
+
+        <!-- == For Test (Environments) == -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
@@ -221,7 +237,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.4</version><!--$NO-MVN-MAN-VER$-->
+                <version>2.10.4</version><!--$NO-MVN-MAN-VER$ -->
                 <configuration>
                     <show>protected</show>
                 </configuration>
@@ -237,7 +253,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version><!--$NO-MVN-MAN-VER$-->
+                <version>3.0.1</version><!--$NO-MVN-MAN-VER$ -->
                 <executions>
                     <execution>
                         <phase>package</phase>
